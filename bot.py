@@ -1,6 +1,11 @@
 import discord
 import responses
 import config
+from discord.ext import commands
+
+
+
+
 
 async def send_message(message, user_message, is_private):
     try:
@@ -14,7 +19,7 @@ def run_discord_bot():
     TOKEN = config.TOKEN
     intents = discord.Intents.all()
     client = discord.Client(intents=intents)
-
+    bot = commands.Bot(command_prefix = '!')
 
     @client.event
     async def on_ready():
@@ -34,6 +39,14 @@ def run_discord_bot():
 
         print(f"{username} said: '{user_message}' ({channel})")
 
+    @bot.event
+    async def hello(ctx):
+        msg = f'Hi {ctx.author.mention}'
+        await ctx.send(msg)
 
 
-    client.run(TOKEN)
+
+    @client.event
+
+    client.run(config.TOKEN)   
+
