@@ -1,0 +1,3 @@
+git+https://github.com/Squidgi/new_bot.py@discord_bot
+dnspython
+pandas
