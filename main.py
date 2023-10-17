@@ -1,8 +1,9 @@
 import discord
-import config
 import questions
+import config
 import random
 import pandas as pd
+# git push heroku main (terminal command to push to heroku)
 
 TOKEN = config.TOKEN
 

@@ -1,3 +1,3 @@
-git+https://github.com/Squidgi/new_bot.py@discord_bot.git
+git+https://squidgi@github.com/Squidgi/new_bot.py@discord_bot.git
 dnspython
 pandas
